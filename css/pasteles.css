@@ -1,0 +1,505 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.cabecerafijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #daa5204a;
+    color: #fff;
+    padding: 20px 30px;
+    z-index: 1000; /* Posiciona encima del resto del contenido */
+}
+
+.cajaprincipal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  border-radius: 15px; /* Bordes redondeados */
+  background: linear-gradient(135deg, #f7c37a, #d99153); /* Fondo degradado con colores cálidos */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2); /* Sombras para profundidad */
+  border: 2px solid #d99153; /* Borde colorido */
+  transition: transform 0.3s ease-in-out; /* Transición para efecto de hover */
+}
+
+/* Efecto hover */
+.cajaprincipal:hover {
+  transform: scale(1.05); /* Agranda ligeramente la caja al pasar el ratón por encima */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+
+.logo img {
+    height: 90px; /* Ajusta la altura según tu necesidad */
+}
+
+.menubotones ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menubotones ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menubotones ul li:first-child {
+    text-decoration: solid;
+    margin-left: 0;
+}
+
+.pintado {
+    padding: 10px;
+    background-color: #030302;
+    border-radius: 10px;
+}
+
+.menubotones ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px; 
+  border-radius: 10px; 
+  transition: background-color 0.4s ease, transform 0.3s ease; 
+  background-color: #58250c; /* Color de fondo cálido */
+  display: inline-block; 
+  margin-right: 10px; 
+  transform: translateY(0); 
+}
+
+/* Efecto hover para los botones */
+.menubotones ul li a:hover {
+  background-color: #d99153; /* Color de fondo más claro en hover */
+  transform: translateY(-5px); /* Levantamiento al poner el cursor */
+}
+
+
+.menubotones ul li a:hover {
+background-color: #0a0a0a;
+}
+
+
+main {
+    margin-top: 120px; /* Da espacio para la cabecera fija */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 70%;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  animation: offerAnimation 2s ease-in-out infinite alternate; /* Animación de ofrecimiento */
+}
+
+@keyframes offerAnimation {
+  0% {
+    transform: translateY(0); /* Posición inicial */
+  }
+  50% {
+    transform: translateY(-10px); /* Movimiento hacia arriba */
+  }
+  100% {
+    transform: translateY(0); /* Volver a posición inicial */
+  }
+}
+
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #333;
+}
+
+.product-card button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+.cart {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 25%;
+    position: sticky;
+    top: 20px;
+}
+
+.cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cart .delivery-button {
+    background: #ddd;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.cart p {
+    color: #666;
+}
+
+footer {
+    background: #6f7703d5;
+    color: #f50000;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+
+
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    ;
+  }
+  
+/* FOOTER STYLES */
+footer {
+  background: #d99153; /* Fondo semi-transparente */
+  color: #ffffff; /* Texto en color blanco */
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal del footer */
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alineación vertical al centro */
+  padding: 0 20px;
+  max-width: 1800px; /* Ancho máximo para evitar que se extienda demasiado */
+  
+  margin: 0 auto;
+}
+
+/* Estilos para el logo en el footer */
+.footer-logo {
+  max-width: 20%;
+ 
+}
+
+.footer-logo img {
+  max-width: 50%; /* Ajustar tamaño de imagen al contenedor */
+  height: auto;
+}
+
+/* Estilos para las secciones del footer */
+.footer-info, .footer-middle, .footer-subscribe {
+  max-width: 25%;
+}
+
+.footer-info p, .footer-middle p, .footer-subscribe p {
+  margin: 10px 0; /* Aumenta el espacio vertical */
+}
+
+.footer-info a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transición para el color */
+}
+
+.footer-info a:hover {
+  color: #ffcc00; /* Color más claro en hover */
+}
+
+/* Estilos para el formulario de suscripción en el footer */
+.footer-subscribe form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-subscribe input {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #fff; /* Borde blanco */
+  border-radius: 3px;
+  background: transparent; /* Fondo transparente */
+  color: #fff;
+}
+
+.footer-subscribe input::placeholder {
+  color: #fff; /* Color del placeholder */
+}
+
+.footer-subscribe button {
+  padding: 8px 16px;
+  border: none;
+  background: rgb(255, 182, 46);
+  color: #272c0d;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición para el color de fondo */
+}
+
+.footer-subscribe button:hover {
+  background: #ffcc00; /* Color de fondo más claro en hover */
+}
+
+/* Estilos para el pie de página inferior */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+
+.cake-section {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.cake-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.cake-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cake-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.cake-card h3 {
+  font-size: 24px;
+  margin: 20px 0 10px;
+}
+
+.cake-card p {
+  font-size: 16px;
+  margin: 0 0 15px;
+}
+
+.cake-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cake-card button:hover {
+  background-color: #0056b3;
+}
+
+.cart {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.cart p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.delivery-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delivery-button:hover {
+  background-color: #218838;
+}
+
+
+body {
+  background-color: #000; /* Fondo negro */
+  font-family: Arial, sans-serif;
+  color: #fff; /* Texto blanco */
+}
+
+.grid-section {
+  text-align: center;
+  padding: 2em;
+}
+
+.grid-section h2 {
+  font-size: 2.5em;
+  color: #fff; /* Texto blanco */
+}
+
+.grid-section h2 span {
+  color: #58250c; /* Texto amarillo */
+}
+
+.grid-section p {
+  color: #aaa; /* Texto gris claro */
+  margin-bottom: 2em;
+}
+
+.btn-tutoriales {
+  background-color: #58250c; /* Fondo amarillo */
+  color: #000; /* Texto negro */
+  border: none;
+  padding: 1em 2em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+
+.btn-tutoriales:hover {
+  background-color: #d8e701; /* Fondo amarillo oscuro */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  gap: 0.5em; /* Ajustar el espacio entre imágenes */
+}
+
+.grid-container img {
+  width: 100%; /* Mantiene el ancho de las columnas */
+  height: 350px; /* Mantiene la proporción de la imagen */
+  object-fit: cover;
+  border-radius: 8px; /* Bordes redondeados */
+  transform: scale(0.7); /* Ajusta el tamaño general de la imagen */
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+.grid-container img:hover {
+  transform: scale(0.8) translateY(-10px); /* Mueve la imagen hacia arriba al pasar el cursor */
+}
+
+
+
+
+
+
+
+
+
+
+body {
+  background-color: #000000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  text-align: center;
+  width: 150px;
+}
+
+.icon img {
+  width: 200px;
+  height: 200px;
+}
+
+.icon h2 {
+  color: #D1FF00;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.icon p {
+  font-size: 14px;
+  color: #ccc;
+}
